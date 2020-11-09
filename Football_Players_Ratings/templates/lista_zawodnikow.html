@@ -1,0 +1,16 @@
+{% extends 'glowny.html' %}
+
+{% block tytul %} Lista zawodnikoów {% endblock %}
+{% load bootstrap %}
+
+{% block strona %}
+
+    {% for zawodnik in zawodnicy %}
+
+
+        <a href="{% url 'zawodnik_URL' zawodnik.id %}"> <button type="submit"><h5>
+            {{ zawodnik.Imie}} {{ zawodnik.Nazwisko}} ({{ zawodnik.Druzyna }}) </h5></button>  </a> <br>
+
+    {% endfor %}
+
+{% endblock %}

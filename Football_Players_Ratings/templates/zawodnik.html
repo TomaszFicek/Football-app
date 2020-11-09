@@ -1,0 +1,29 @@
+{% extends 'glowny.html' %}
+{% load bootstrap %}
+
+{% block tytul %} {{ zawodnik.Imie }} {{ zawodnik.Nazwisko }} {% endblock %}
+
+
+{% block strona %}
+
+    <div class="card" style="width: 50rem;">
+          <div class="card-body">
+
+              <div class="row">
+                  <div class="col-9">
+                    <h5 class="card-title">{{ zawodnik.Imie }} {{ zawodnik.Nazwisko }}</h5>
+                  </div>
+                  <div class="col-3">
+                     Wiek: {{ zawodnik.Wiek }}
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col">
+                    <p class="card-text">Pozycja na boisku: {{ zawodnik.Pozycja_na_boisku }}</p>
+                  </div>
+
+              </div>
+          </div>
+    </div>
+
+{% endblock %}
