@@ -6,7 +6,7 @@
 
 {% block strona %}
 
-    <div class="card" style="width: 50rem;">
+    <div class="card" style="width: 30rem;">
           <div class="card-body">
 
               <div class="row">
@@ -19,7 +19,7 @@
               </div>
               <div class="row">
                   <div class="col">
-                    <p class="card-text">Pozycja na boisku: {{ zawodnik.Pozycja_na_boisku }}</p>
+                    <p class="card-text">Pozycja na boisku: {{ zawodnik.get_Pozycja_na_boisku_display }}</p>
                   </div>
 
               </div>

@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Football_Players_Ratings.views import strona_zawodnicy, zawodnik
+from Football_Players_Ratings.views import strona_zawodnicy, zawodnik, terminarz
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('lista_zawodnikow/', strona_zawodnicy),
-    path('zawodnik/<int:id>/', zawodnik, name='zawodnik_URL' )
+    path('zawodnik/<int:id>/', zawodnik, name='zawodnik_URL' ),
+    path('terminarz/', terminarz),
 ]
